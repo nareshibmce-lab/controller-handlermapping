@@ -1,9 +1,22 @@
 package com.naresh.WebMvc.model;
 
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
 public class User {
+
+    @Size(min = 3, max = 20)
     private String name;
+
+    @Size(min = 6, max = 200)
     private String email;
+
+    @Min(10)
     private int age;
+
+    @Pattern(regexp = "[0-9]{10}")
     private String phone;
 
     public String getName() {

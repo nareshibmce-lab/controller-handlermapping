@@ -3,6 +3,7 @@ package com.naresh.WebMvc.controller;
 import com.naresh.WebMvc.model.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -30,7 +31,7 @@ public class UserController {
   }
 
   @RequestMapping(value = "/register",method = RequestMethod.POST)
-  public String register(@ModelAttribute("user")User user, BindingResult result) {
+  public String register(@Valid @ModelAttribute("user")User user, BindingResult result) {
     if(result.hasErrors()){
       return "user-form";
     }
