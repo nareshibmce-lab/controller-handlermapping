@@ -10,7 +10,9 @@
 
     <p>This is the Home Page.</p>
 
-    <a href="about">About Portal</a>
+    <a href="${pageContext.request.contextPath}/user/about">About Portal</a>
+
+    <a href="${pageContext.request.contextPath}/user/register">Registration Form</a>
 
 </body>
 </html>

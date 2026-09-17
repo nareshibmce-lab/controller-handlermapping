@@ -15,6 +15,9 @@
     <a href="${pageContext.request.contextPath}/user/register">
         Register Another User
     </a>
+    <a href="${pageContext.request.contextPath}/user/home">
+    Home
+    </a>
 </div>
 </body>
 </html>
